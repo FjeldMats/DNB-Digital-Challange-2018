@@ -19,9 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Popu" />
-        <activity android:name=".bestill" />
-        <activity android:name=".datePicker"></activity>
+        <activity android:name=".order" />
+        <activity android:name=".datePicker" />
+        <activity android:name=".preOverview" />
+        <activity android:name=".travelOverview" />
+        <activity android:name=".returnOverview"></activity>
     </application>
 
 </manifest>

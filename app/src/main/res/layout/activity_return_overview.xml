@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.matsfjeld.valutta.Popu">
+    tools:context="com.example.matsfjeld.valutta.returnOverview">
 
 </android.support.constraint.ConstraintLayout>
