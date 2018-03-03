@@ -25,6 +25,7 @@ public class preOverview extends AppCompatActivity {
         btnBuy.setVisibility(View.GONE);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,6 +37,7 @@ public class preOverview extends AppCompatActivity {
             NotificationManager notificationManager = (NotificationManager)
                     getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.cancel(1);
+//            Intent b = new Intent(this,preOverview.class);
         }
         setContentView(R.layout.activity_preoverview);
     }

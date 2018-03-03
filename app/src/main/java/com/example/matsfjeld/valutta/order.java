@@ -62,14 +62,13 @@ public class order extends AppCompatActivity {
 
         String currStr = currencySpinner.getSelectedItem().toString();
 
-
         Intent toContinueToOrder =  new Intent(this, preOverview.class );
         toContinueToOrder.putExtra("date",currStr);
         startActivity(toContinueToOrder);
     }
 
     public void automaticSettings(View view){
-        Intent toAutomaticSettings  = new Intent(this, autoBuy.class);
+        Intent toAutomaticSettings  = new Intent(this, smartAmount.class);
         startActivity(toAutomaticSettings);
     }
 }

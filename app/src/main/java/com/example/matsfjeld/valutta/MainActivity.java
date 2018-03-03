@@ -1,10 +1,8 @@
 package com.example.matsfjeld.valutta;
 
-import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
@@ -63,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toReturnOverview);
     }
 
-    public void aB(View view){
-        Intent toReturnOverview = new Intent(this, autoBuy.class);
-        startActivity(toReturnOverview);
-    }
 
     public void flyNotification(View view) {
         Intent intent = new Intent(this, autoBuy.class);
@@ -89,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(0, mBuilder.build());
     }
 
-    public void buyC(){
-        System.out.println("press detected");
-    }
 
     public void manNot(View view) {
         Intent buy = new Intent(this, preOverview.class);
@@ -102,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         pac.putInt("buy", 1);
         buy.putExtras(pac);
         PendingIntent buyShort = PendingIntent.getActivity(this, 0, buy, 0);
-        PendingIntent pendingBuy = PendingIntent.getBroadcast(this,0,buy,0);
         Intent intent = new Intent(this, preOverview.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
