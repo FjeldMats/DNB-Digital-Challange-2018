@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         //setSupportActionBar(toolbar);
         final Intent intent = new Intent(this, Popu.class);
 
-
-
 /*
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,10 +66,28 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void goToBestill(View view){
+    public void goToOrder(View view){
         Intent toBestill = new Intent(this, bestill.class);
         startActivity(toBestill);
-
     }
+
+    public void goToPreOverview(View view){
+        Intent toOverview = new Intent(this, overview.class);
+        startActivity(toOverview);
+    }
+
+    public void goToTravelOverview(View view){
+        Intent toTravelOverview = new Intent(this, travelOverview.class);
+        startActivity(toTravelOverview);
+    }
+
+    public void goToReturnOverview(View view){
+        Intent toReturnOverview = new Intent(this, returnOverview.class);
+        startActivity(toReturnOverview);
+    }
+
+
+
+
 
 }
