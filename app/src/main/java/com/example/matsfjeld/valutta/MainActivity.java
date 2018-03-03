@@ -90,13 +90,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buyC(){
-        //
+        System.out.println("press detected");
     }
 
     public void manNot(View view) {
         Intent buy = new Intent(this, preOverview.class);
         buy.setAction("buyC");
+//        this.buyC();
         buy.putExtra("hot",0);
+        Bundle pac = new Bundle();
+        pac.putInt("buy", 1);
+        buy.putExtras(pac);
+        PendingIntent buyShort = PendingIntent.getActivity(this, 0, buy, 0);
         PendingIntent pendingBuy = PendingIntent.getBroadcast(this,0,buy,0);
         Intent intent = new Intent(this, preOverview.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -110,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 .setVibrate(new long[] { 200, 200, 200, 200, 200 })
                 .setLights(Color.rgb(0,124,132), 10,10)
                 .setContentIntent(pendingIntent)
-                .addAction(R.drawable.ic_stat_new_message,"Buy", pendingBuy);
+                .addAction(R.drawable.ic_stat_new_message,"Buy", buyShort);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(1, mBuilder.build());
     }
