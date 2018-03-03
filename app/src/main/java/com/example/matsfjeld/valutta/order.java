@@ -50,13 +50,26 @@ public class order extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         currencySpinner.setAdapter(dataAdapter);
 
-
     }
 
     public void goToDatePopup(View view){
         Intent toDate = new Intent(this, datePicker.class);
         startActivity(toDate);
 
+    }
 
+    public void continueToOrder(View view){
+
+        String currStr = currencySpinner.getSelectedItem().toString();
+
+
+        Intent toContinueToOrder =  new Intent(this, preOverview.class );
+        toContinueToOrder.putExtra("date",currStr);
+        startActivity(toContinueToOrder);
+    }
+
+    public void automaticSettings(View view){
+        Intent toAutomaticSettings  = new Intent(this, autoBuy.class);
+        startActivity(toAutomaticSettings);
     }
 }
