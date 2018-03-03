@@ -1,7 +1,12 @@
 package com.example.matsfjeld.valutta;
 
+import android.app.NotificationChannel;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
@@ -57,7 +62,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toReturnOverview);
     }
 
+    public void flyNotification(View view) {
+        Intent intent = new Intent(this, order.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.dnb)
+                .setContentTitle("New DNB service!")
+                .setContentText("Try DNB's new service to save money on you vacation.")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(0, mBuilder.build());
+    }
 
 
 
