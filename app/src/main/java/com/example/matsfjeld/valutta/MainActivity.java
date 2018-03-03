@@ -21,16 +21,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         final Intent intent = new Intent(this, Popu.class);
 
-        Button button1 = (Button) findViewById(R.id.btn1);
-        Button button2 = (Button) findViewById(R.id.btn2);
-
+/*
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                startActivity(intent2);
 
             }
         });
@@ -41,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+ */
+
     }
 
     @Override
@@ -64,49 +65,29 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-/*
-    public void popu(View view){
 
-        boolean isClicked = true;
-        PopupWindow popUpWindow;
-        ViewGroup.LayoutParams layoutParams;
-        LinearLayout mainLayout;
-        Button btnClickHere;
-        LinearLayout containerLayout;
-        TextView tvMsg;
-
-        containerLayout = new LinearLayout(this);
-        mainLayout = new LinearLayout(this);
-        popUpWindow = new PopupWindow(this);
-
-        btnClickHere = new Button(this);
-        btnClickHere.setText("Click Here For Pop Up Window !!!");
-        btnClickHere.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                if (isClicked) {
-                    isClicked = false;
-                    popUpWindow.showAtLocation(mainLayout, Gravity.BOTTOM, 10, 10);
-                    popUpWindow.update(50, 50, 320, 90);
-                } else {
-                    isClicked = true;
-                    popUpWindow.dismiss();
-                }
-            }
-
-        });
-
-        tvMsg = new TextView(this);
-        tvMsg.setText("Hi this is pop up window...");
-
-        layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
-                LayoutParams.WRAP_CONTENT);
-        containerLayout.setOrientation(LinearLayout.VERTICAL);
-        containerLayout.addView(tvMsg, layoutParams);
-        popUpWindow.setContentView(containerLayout);
-        mainLayout.addView(btnClickHere, layoutParams);
-        setContentView(mainLayout);
+    public void goToOrder(View view){
+        Intent toBestill = new Intent(this, bestill.class);
+        startActivity(toBestill);
     }
-    */
+
+    public void goToPreOverview(View view){
+        Intent toOverview = new Intent(this, overview.class);
+        startActivity(toOverview);
+    }
+
+    public void goToTravelOverview(View view){
+        Intent toTravelOverview = new Intent(this, travelOverview.class);
+        startActivity(toTravelOverview);
+    }
+
+    public void goToReturnOverview(View view){
+        Intent toReturnOverview = new Intent(this, returnOverview.class);
+        startActivity(toReturnOverview);
+    }
+
+
+
+
 
 }

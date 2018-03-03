@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Popu"></activity>
+        <activity android:name=".Popu" />
+        <activity android:name=".bestill" />
+        <activity android:name=".datePicker"></activity>
     </application>
 
 </manifest>
