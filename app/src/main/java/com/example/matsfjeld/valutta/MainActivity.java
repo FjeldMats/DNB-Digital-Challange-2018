@@ -3,6 +3,7 @@ package com.example.matsfjeld.valutta;
 import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -72,7 +73,13 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText("Try DNB's new service to save money on you vacation.")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
+                .setVibrate(new long[] { 200, 200, 200, 200, 200 })
+                .setLights(Color.rgb(0,124,132), 10,10)
                 .setContentIntent(pendingIntent);
+        /*long cd = System.currentTimeMillis();
+        while(cd + 5000 >= System.currentTimeMillis()){
+            String lol = "lol";
+        }*/
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(0, mBuilder.build());
     }
@@ -95,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText("Do you want to buy your currency now?")
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setAutoCancel(true)
+                .setVibrate(new long[] { 200, 200, 200, 200, 200 })
+                .setLights(Color.rgb(0,124,132), 10,10)
                 .setContentIntent(pendingIntent)
                 .addAction(R.drawable.ic_stat_new_message,"Buy", pendingBuy);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
@@ -111,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText("Click here to see how much you saved.")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
+                .setVibrate(new long[] { 200, 200, 200, 200, 200 })
+                .setLights(Color.rgb(0,124,132), 10,10)
                 .setContentIntent(pendingIntent);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(2, mBuilder.build());
