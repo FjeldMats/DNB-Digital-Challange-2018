@@ -13,18 +13,27 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".order" />
-        <activity android:name=".datePicker" />
-        <activity android:name=".preOverview" />
-        <activity android:name=".travelOverview" />
-        <activity android:name=".returnOverview" />
-        <activity android:name=".smartAmount"></activity>
+        <activity android:name=".order"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".datePicker"
+            android:parentActivityName=".order"/>
+        <activity android:name=".preOverview"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".travelOverview"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".returnOverview"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".smartAmount"
+            android:parentActivityName=".order"></activity>
+
     </application>
 
 </manifest>
