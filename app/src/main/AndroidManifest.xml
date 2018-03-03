@@ -31,6 +31,7 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".smartAmount"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".autoBuy"></activity>
     </application>
 
 </manifest>

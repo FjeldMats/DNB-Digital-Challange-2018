@@ -45,12 +45,11 @@
         android:id="@+id/goToOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="124dp"
-        android:layout_marginStart="124dp"
         android:layout_marginTop="88dp"
+        android:onClick="backToOrder"
         android:text="Continue to Order"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
 </android.support.constraint.ConstraintLayout>
