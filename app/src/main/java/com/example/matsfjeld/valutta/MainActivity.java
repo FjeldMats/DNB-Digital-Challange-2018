@@ -108,7 +108,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mainLayout);
     }
     */
-    public void popu(View view){
 
-    }
 }
