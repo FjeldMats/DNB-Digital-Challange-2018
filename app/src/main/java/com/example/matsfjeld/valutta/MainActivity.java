@@ -23,12 +23,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+        final Intent intent = new Intent(this, Popu.class);
 
         Button button1 = (Button) findViewById(R.id.btn1);
+        Button button2 = (Button) findViewById(R.id.btn2);
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
 
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity(intent);
             }
         });
     }
@@ -99,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
     }
     */
     public void popu(View view){
-        Intent intent = new Intent(this, Popu.class);
-        startActivity(intent);
+
     }
 }
