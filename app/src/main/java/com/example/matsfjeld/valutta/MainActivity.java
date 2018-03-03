@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toReturnOverview);
     }
 
+    public void aB(View view){
+        Intent toReturnOverview = new Intent(this, autoBuy.class);
+        startActivity(toReturnOverview);
+    }
+
     public void flyNotification(View view) {
         Intent intent = new Intent(this, autoBuy.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
