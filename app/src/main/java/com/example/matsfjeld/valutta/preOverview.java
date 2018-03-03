@@ -14,13 +14,13 @@ public class preOverview extends AppCompatActivity {
 
 
     public void buyCurrentPrice(View view){
-        Button btnBuy = (Button) findViewById(R.id.btnBuy);
+        Button btnBuy = findViewById(R.id.btnBuy);
 
         int price = 54;
         Intent intent = getIntent();
         String currencyStr = intent.getStringExtra("date");
         String priceStr = String.valueOf(price) ;
-        TextView statusUpdate = (TextView) findViewById(R.id.statusView);
+        TextView statusUpdate = findViewById(R.id.statusView);
         statusUpdate.setText("You bought " + priceStr + " " + currencyStr);
         btnBuy.setVisibility(View.GONE);
     }

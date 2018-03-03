@@ -34,9 +34,9 @@ public class order extends AppCompatActivity {
         Intent intent = getIntent();
         String date = intent.getStringExtra("date");
 
-        TextView showDate= (TextView) findViewById(R.id.dateView);
+        TextView showDate=  findViewById(R.id.dateView);
 
-        currencySpinner = (Spinner) findViewById(R.id.currencySpinner);
+        currencySpinner = findViewById(R.id.currencySpinner);
 
 
         showDate.setText(date);
