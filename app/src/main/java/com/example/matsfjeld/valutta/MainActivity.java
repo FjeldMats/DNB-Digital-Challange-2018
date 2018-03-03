@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent)
-                .addAction(R.drawable.ic_action_stat_share,"Buy", pendingBuy);
+                .addAction(R.drawable.ic_stat_new_message,"Buy", pendingBuy);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
 // notificationId is a unique int for each notification that you must define
