@@ -74,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-
-// notificationId is a unique int for each notification that you must define
         notificationManager.notify(0, mBuilder.build());
     }
 
@@ -100,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
                 .setContentIntent(pendingIntent)
                 .addAction(R.drawable.ic_stat_new_message,"Buy", pendingBuy);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-
-// notificationId is a unique int for each notification that you must define
         notificationManager.notify(1, mBuilder.build());
     }
 
@@ -117,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-
-// notificationId is a unique int for each notification that you must define
         notificationManager.notify(2, mBuilder.build());
     }
 
