@@ -12,6 +12,7 @@
         android:layout_height="12dp"
         android:layout_marginTop="72dp"
         android:text="Turn on auto purchase "
+        android:textColorLink="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
