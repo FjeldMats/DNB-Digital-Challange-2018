@@ -79,6 +79,47 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(0, mBuilder.build());
     }
 
+    public void buyC(){
+        //
+    }
 
+    public void manNot(View view) {
+        Intent buy = new Intent(this, preOverview.class);
+        buy.setAction("buyC");
+        buy.putExtra("hot",0);
+        PendingIntent pendingBuy = PendingIntent.getBroadcast(this,0,buy,0);
+        Intent intent = new Intent(this, preOverview.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.dnb)
+                .setContentTitle("Low exchange rates now!")
+                .setContentText("Do you want to buy your currency now?")
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent)
+                .addAction(R.drawable.ic_action_stat_share,"Buy", pendingBuy);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(1, mBuilder.build());
+    }
+
+    public void returnNot(View view) {
+        Intent intent = new Intent(this, returnOverview.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.dnb)
+                .setContentTitle("Welcome back!")
+                .setContentText("Click here to see how much you saved.")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(2, mBuilder.build());
+    }
 
 }
