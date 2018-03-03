@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void flyNotification(View view) {
-        Intent intent = new Intent(this, order.class);
+        Intent intent = new Intent(this, autoBuy.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)

@@ -23,12 +23,11 @@
         android:id="@+id/datePick"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="162dp"
         android:layout_marginTop="40dp"
         android:onClick="goToDatePopup"
-        android:text="Change date"
+        android:text="Choose date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -49,10 +48,9 @@
         android:id="@+id/currencySpinner"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateView" />
 
