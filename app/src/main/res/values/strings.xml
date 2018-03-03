@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Valutta</string>
+    <string name="app_name">Smart travel currency</string>
     <string name="action_settings">Settings</string>
 
     <string name="new_message_notification_title_template">New message: %1$s</string>
