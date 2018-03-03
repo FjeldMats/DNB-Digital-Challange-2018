@@ -23,7 +23,8 @@
         <activity android:name=".datePicker" />
         <activity android:name=".preOverview" />
         <activity android:name=".travelOverview" />
-        <activity android:name=".returnOverview"></activity>
+        <activity android:name=".returnOverview" />
+        <activity android:name=".autoBuy"></activity>
     </application>
 
 </manifest>
