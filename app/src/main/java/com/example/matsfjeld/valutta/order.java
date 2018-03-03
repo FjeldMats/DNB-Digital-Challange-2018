@@ -19,7 +19,6 @@ public class order extends AppCompatActivity {
 
         TextView showDate= (TextView) findViewById(R.id.dateView);
 
-
         showDate.setText(date);
     }
 
