@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Spinner;
 
@@ -64,6 +65,22 @@ public class order extends AppCompatActivity {
 
         Intent toContinueToOrder =  new Intent(this, preOverview.class );
         toContinueToOrder.putExtra("date",currStr);
+        EditText getOr = findViewById(R.id.editText);
+        double amount = Double.parseDouble(getOr.getText().toString());
+        Bundle pac = new Bundle();
+        if (currStr == "GBP"){
+            pac.putDouble("pri", 10.75);
+        }
+        else if (currStr == "EUR"){
+            pac.putDouble("pri", 9.59);
+        }
+        else if (currStr == "USD"){
+            pac.putDouble("pri", 7.79);
+        }else{
+            pac.putDouble("pri", 0);
+        }
+        pac.putDouble("amm", amount);
+        toContinueToOrder.putExtras(pac);
         startActivity(toContinueToOrder);
     }
 
