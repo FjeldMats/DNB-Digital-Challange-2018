@@ -23,6 +23,17 @@ public class preOverview extends AppCompatActivity {
         TextView statusUpdate = findViewById(R.id.statusView);
         statusUpdate.setText("You bought " + amount + " " + cur);
         btnBuy.setVisibility(View.GONE);
+        Button tra = findViewById(R.id.button2);
+        tra.setVisibility(View.VISIBLE);
+    }
+
+
+    public void travelView(View view){
+        Intent intent = new Intent(this, travelOverview.class);
+        Bundle pac = new Bundle();
+        pac.putDouble("amount", amount);
+        intent.putExtras(pac);
+        startActivity(intent);
     }
 
 
@@ -33,6 +44,8 @@ public class preOverview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle pac = getIntent().getExtras();
         setContentView(R.layout.activity_preoverview);
+        Button tra = findViewById(R.id.button2);
+        tra.setVisibility(View.GONE);
         if (pac != null) {
             if (pac.getInt("buy") == 1) {
                 NotificationManager notificationManager = (NotificationManager)
