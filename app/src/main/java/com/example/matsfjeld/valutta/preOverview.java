@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class preOverview extends AppCompatActivity {
-    Boolean bought;
+    Boolean bought = false;
     double amount;
     String cur;
 
@@ -28,7 +28,6 @@ public class preOverview extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
 
         super.onCreate(savedInstanceState);

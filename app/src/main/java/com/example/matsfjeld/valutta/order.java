@@ -66,7 +66,13 @@ public class order extends AppCompatActivity {
         Intent toContinueToOrder =  new Intent(this, preOverview.class );
         toContinueToOrder.putExtra("date",currStr);
         EditText getOr = findViewById(R.id.editText);
-        double amount = Double.parseDouble(getOr.getText().toString());
+        double amount;
+        try {
+            amount = Double.parseDouble(getOr.getText().toString());
+        }
+        catch (Exception e){
+            amount = 0;
+        }
         Bundle pac = new Bundle();
         if (currStr == "GBP"){
             pac.putDouble("pri", 10.75);
