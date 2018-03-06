@@ -10,8 +10,10 @@ public class travelOverview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel_overview);
-        Bundle pac = getIntent().getExtras();
-        TextView am = findViewById(R.id.balance);
-        am.setText("You account balance:\n\n\n\n"+ pac.getDouble("amount"));
+        if (getIntent().getExtras() != null) {
+            Bundle pac = getIntent().getExtras();
+             TextView am = findViewById(R.id.balance);
+            am.setText("You account balance:\n\n\n\n" + pac.getDouble("amount"));
+        }
     }
 }
